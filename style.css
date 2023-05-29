@@ -1,0 +1,292 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;0,800;1,100;1,300;1,400;1,500;1,700;1,800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+
+:root {
+    --main-color: #f56226;
+    --second-color: #ffac38;
+    --text-color: #444;
+    --gradinet: linear-gradient(#fe5b3d, #ffac38);
+}
+
+/* custom scroll bar */
+html::-webkit-scrollbar {
+    width: 0.4rem;
+}
+html::-webkit-scrollbar  {
+    width: 0.4rem;
+}
+html::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: var(--main-color);
+    border-radius: 4rem;
+}
+
+section {
+    padding: 50px 100px;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background: #eeeff1; */
+    padding: 15px 50px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba (255, 255, 255, 0)); 
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, o, 0.37);
+
+}
+
+.logo img {
+    width: 60px;
+}
+
+.navbar {
+    display: flex;
+    
+
+}
+
+.navbar li {
+    position: relative;
+}
+
+.navbar a {
+    font-size: 1rem;
+    padding: 10px 20px;
+    color: var(--text-color);
+    font-weight: 450;
+
+}
+
+.navbar a::after{
+    content: "" ;
+    width: 0;
+    height: 3px;
+    background: var(--gradinet);
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+    transition: 0.5s;
+
+
+}
+
+.navbar a:hover:after{
+    width: 100%;
+}
+/* .glasseffect{
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba (255, 255, 255, 0)); 
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, o, 0.37);
+
+} */
+#menu-icon{
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10001;
+    display: none;
+}
+.header{
+    padding: 10px 20px;
+    color: var(--text-color);
+    font-weight: 500;
+}
+.header-btn .sign-in{
+    background: #474fa0;
+    background-size: 100px;
+    color: #fff;
+    border-radius: 0.5rem;
+}
+.header-btn .sign-in:hover{
+    background: var(--main-color);
+    background-size: 100px;
+    
+}
+.header-btn .sign-up{
+    /* font-size: 1rem; */
+    background: #474fa0;
+    background-size: 100px;
+    color: #fff;
+    border-radius: 0.5rem;
+    /* background-size: 10px; */
+}
+.header-btn .sign-up:hover{
+    background: var(--main-color);
+    background-size: 100px;
+    
+}
+
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    background: url(img/1.png);
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: cover;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+
+}
+/* #invisible{
+    display: none;
+}
+#hide{
+    display: block; */
+
+.text h1{
+    font-size: 3.5rem;
+    letter-spacing: 2px;
+
+}
+.text span{
+    margin: 00.5rem 0 1rem;
+    color: var(--main-color);
+
+}
+.wapper{
+    display: inline-flex;
+
+
+}
+.wapper .static-txt{
+    font-size: 60px;
+}
+.wapper .dynamic-txts{
+    margin-left: 20px;
+    height: 90px;
+    line-height: 90px;
+    /* background: #ffac38; */
+    overflow: hidden;
+
+
+    
+}
+.dynamic-txts li{
+    color: var(--main-color);
+    list-style: none;
+    position: relative;
+    top: 0;
+
+    animation: slide 6s steps(4) infinite;
+
+}
+@keyframes slide {
+    100%{
+        top: -360px;
+    }
+}
+.dynamic-txts li span{
+    position: relative;
+}
+.dynamic-txts li span::after{
+    content: "";
+    left: 0;
+    /* position: absolute;
+    height: 100%;
+    width: 100%; */
+    /* border-left: 2px solid #f56226; */
+    /* background: #eeeff1; */
+    animation: typing 1.5s steps(10) infinite;
+
+}
+@keyframes typing {
+    100%{
+        left: 100%;
+        margin: 0 -35px 0 35px;
+    }
+}
+.app-stores{
+    display: flex;
+}
+.app-stores img{
+    width: 200px;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+.form-container form{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    position: absolute;
+    bottom: 2rem;
+    left: 70px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 0.5rem;
+
+}
+.input-box{
+    flex: 1 1 7rem;
+    display: flex;
+    flex-direction: column;
+}
+.input-box span{
+    font-weight: 500;
+
+}
+ .input-box input{
+    padding: 7px;
+    outline: none;
+    border: none;
+    background: #eeeff1;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+ }
+ .form-container form .btn{
+    flex: 1 1 7rem;
+    padding: 10px 34px;
+    border: none;
+    border-radius: 0.5rem;
+    background: #474fa0;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+ }
+
+ .form-container form .btn:hover{
+    background: var(--main-color);
+    /* background-image: url(logo/AutoVent.io.png); */
+ }
+ .heading{
+    text-align: center;
+ }
+ .heading span{
+    font-weight: 500;
+    text-transform: uppercase;
+ }
+ .heading h1{
+    font-size: 2rem;
+ }
